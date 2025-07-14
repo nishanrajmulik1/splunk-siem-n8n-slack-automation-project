@@ -1,97 +1,109 @@
-# SIEM Lab with Splunk, pfSense, n8n & Slack Integration
+# 🔐 SIEM Lab with Splunk, pfSense, n8n & Slack Integration
 
-This project demonstrates a hands-on SIEM lab environment designed to simulate real-world SOC workflows with log collection, alert generation, and automation using n8n and Slack integration.
+This project showcases a fully functional Blue Team cybersecurity lab designed to simulate real-world Security Operations Center (SOC) workflows. It integrates **Splunk** for SIEM, **pfSense** for network segmentation, **n8n** for security automation, and **Slack** for alert delivery.
 
 ---
 
-## 🌐 Network Diagram
+## 🌐 Network Architecture
 
 ![SIEM Lab Diagram](screenshots/SIEM%20Automation%20LAB.jpeg)
 
 ---
 
-## 🔧 Lab Components
+## 🧩 Lab Components
 
-| Component            | Role                           | IP Address     |
-|--------------------- |------------------------------- |----------------|
-| pfSense Firewall     | Network segmentation           | 10.0.1.1       |
-| Splunk               | SIEM platform                  | 10.0.1.110     |
-| Windows Server 2022  | Domain Controller (SQUID.local)| 10.0.1.104     |
-| Windows 10           | Domain-joined endpoint         | 10.0.1.120     |
-| Kali Linux           | Attacker machine               | 70.0.1.101     |
-| n8n                  | SOAR automation engine         | 10.0.1.10      |
+| Component              | Role                             | IP Address     |
+|------------------------|----------------------------------|----------------|
+| **pfSense Firewall**   | Network segmentation             | 10.0.1.1       |
+| **Splunk**             | SIEM platform                    | 10.0.1.110     |
+| **Windows Server 2022**| Domain Controller (SQUID.local)  | 10.0.1.104     |
+| **Windows 10**         | Domain-joined endpoint           | 10.0.1.120     |
+| **Kali Linux**         | Attacker machine (isolated zone) | 70.0.1.101     |
+| **n8n**                | SOAR automation engine           | 10.0.1.10      |
 
 ---
 
-1. **pfSense**
+## 🖼️ Infrastructure Snapshots
+
+### 🔹 pfSense Firewall Interface
 ![pfSense interface](screenshots/pfSense.png)
 
----
-
-2. **Windows Server**
+### 🔹 Windows Server (Domain Controller)
 ![Domain Controller](screenshots/Windows%20Server.png)
 
----
-
-3. **Domain PC**
+### 🔹 Domain-Joined Windows 10 Endpoint
 ![Domain PC](screenshots/windows10ip.png)
 
----
-
-4. **Splunk SIEM**
+### 🔹 Splunk SIEM Interface
 ![Splunk](screenshots/Splunkip.png)
 
----
-
-5. **n8n Automation**
+### 🔹 n8n Automation Engine
 ![n8n](screenshots/n8nip.png)
 
----
-
-6. **Attacker IP**
+### 🔹 Kali Linux Attacker
 ![AttackPC](screenshots/kaliip.png)
 
 ---
 
-## 🛠️ Features
+## 🚨 Simulated Attack: Brute-Force Attack From Kali to Windows
 
-- Log collection from Windows endpoints via Universal Forwarder
-- Alert creation in Splunk for suspicious activity (e.g., PowerShell abuse, failed logons)
-- Automated alert forwarding using n8n webhook
-- Slack notifications with key alert details
-- Network isolation between internal and attack zones via pfSense
+![bruteforce](screenshots/bruteforce.png)
 
 ---
 
-## 🚀 How It Works
+## 🔁 Workflow Overview
 
-1. **Log Collection** → Windows logs are sent to Splunk via Universal Forwarder.
-  
-2. **Alert Detection** → Splunk searches detect anomalies and trigger alerts.
-![SIEM](screenshots/splunksiem.png)
+### 1️⃣ Log Collection
+- Windows logs are collected via **Splunk Universal Forwarder** and sent to Splunk for indexing.
 
-3. **n8n Webhook** → Splunk alert webhook forwards to n8n.
-![n8nsetup](screenshots/n8nwebhooksetup.png)
+### 2️⃣ Threat Detection in Splunk
+- Correlation searches identify brute-force attempts and suspicious PowerShell usage.
+- Examples:
+  ![target user events](screenshots/targetuser.png)
+  ![target user timeline](screenshots/targetuser1.png)
+  ![SIEM dashboard](screenshots/splunksiem.png)
+  ![Detection trigger](screenshots/targetuserdetection.png)
 
-4. **Automation** → n8n parses and sends alert to Slack channel.
-![n8n](screenshots/splunkton8n.png)
+### 3️⃣ Splunk → n8n Webhook Trigger
+- Alerts are forwarded to n8n via webhook.
+  ![n8n webhook](screenshots/n8nwebhooksetup.png)
 
-5. **SOC Visibility** → Slack receives alert messages for analyst review.
-![n8nautomation](screenshots/n8ntoslack.png)
+### 4️⃣ n8n → Slack Automation
+- n8n parses JSON data and generates Slack notifications with alert context.
+  ![n8n automation](screenshots/splunkton8n.png)
+  ![n8n automation alt](screenshots/splunkton8n1.png)
+
+### 5️⃣ Analyst Notification via Slack
+- Real-time visibility for analysts through Slack integration.
+  ![Slack alert](screenshots/n8ntoslack.png)
+
+---
+
+## 💡 Key Features
+
+- ✅ End-to-end SIEM + SOAR pipeline using open-source and enterprise tools
+- ✅ Real-time detection and alerting of brute-force attacks
+- ✅ Fully segmented lab with isolated attacker subnet
+- ✅ Automation of alerting workflows with n8n + Slack
 
 ---
 
-## 📚 Learning Outcomes
+## 🎓 Learning Outcomes
 
-- SIEM setup and log forwarding
-- Alert creation and tuning
-- SOAR automation using open-source tools
-- Hands-on cybersecurity detection and response workflows
+- Build and configure a home SOC lab
+- Understand and apply detection engineering with Splunk
+- Automate incident alerting using webhooks and n8n
+- Deliver SOC alerts via Slack for analyst response
+
+---
+
+## 🙌 Credits
+
+Created by [Nishan Rajmulik](https://www.linkedin.com/in/nishanrajmulik)  
+🎯 Part of my hands-on cybersecurity journey to master SIEM, SOAR, and Blue Team operations.
 
 ---
 
-## 📌 Credits
+## 📜 License
 
-This project was built by [Nishan Rajmulik](https://www.linkedin.com/in/nishanrajmulik) as part of a hands-on cybersecurity learning journey.
-
----
+MIT License
