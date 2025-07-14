@@ -44,12 +44,22 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 ---
 
 ## 📁 Configurations
-
+**pfSense**
 ![pfSense interface](screenshots/pfSense.png)
+
+**Windows Server**
 ![Domain Controller](screenshots/Windows%20Server.png)
+
+**Domain PC**
 ![Domain PC](screenshots/windows10ip.png)
+
+**Splunk SIEM**
 ![Splunk](screenshots/splunkip.png)
+
+**n8n Automation**
 ![n8n](screenshots/n8nip.png)
+
+**Attacker IP**
 ![AttackPC](screenshots/kaliip.png)
 
 
