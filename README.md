@@ -29,7 +29,7 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ## 🌐 Network Diagram
 
-![SIEM Lab Diagram](network-diagram/siem-lab-network-diagram.png)
+![SIEM Lab Diagram](screenshots/SIEM%20Automation%20LAB.jpeg)
 
 ---
 
@@ -45,9 +45,14 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ## 📁 Configurations
 
-- `splunk-alert-example.xml`: Sample Splunk alert setup
-- `n8n-webhook-flow.json`: n8n automation flow
-- `pfSense-config-sample.txt`: pfSense interface and NAT config
+![pfSense interface](screenshots/pfSense.png)
+![Domain Controller](screenshots/Windows%20Server.png)
+![Domain PC](screenshots/windows10ip.png)
+![Splunk](screenshots/splunkip.png)
+![n8n](screenshots/n8nip.png)
+![AttackPC](screenshots/kaliip.png)
+
+
 
 ---
 
