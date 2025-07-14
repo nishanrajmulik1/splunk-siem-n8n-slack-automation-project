@@ -6,7 +6,7 @@ This project showcases a fully functional Blue Team cybersecurity lab designed t
 
 ## 🌐 Network Architecture
 
-![SIEM Lab Diagram](screenshots/SIEM%20Automation%20L.jpeg)
+![SIEM Lab Diagram](screenshots/SIEM%20Automation%20LAB.jpeg)
 
 ---
 
