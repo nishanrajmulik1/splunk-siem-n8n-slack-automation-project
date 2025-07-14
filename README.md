@@ -4,6 +4,12 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ---
 
+## 🌐 Network Diagram
+
+![SIEM Lab Diagram](screenshots/SIEM%20Automation%20LAB.jpeg)
+
+---
+
 ## 🔧 Lab Components
 
 | Component            | Role                           | IP Address     |
@@ -27,52 +33,56 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ---
 
-## 🌐 Network Diagram
+## 📁 Configurations
 
-![SIEM Lab Diagram](screenshots/SIEM%20Automation%20LAB.jpeg)
+1. **pfSense**
+![pfSense interface](screenshots/pfSense.png)
+
+---
+
+2. **Windows Server**
+![Domain Controller](screenshots/Windows%20Server.png)
+
+---
+
+3. **Domain PC**
+![Domain PC](screenshots/windows10ip.png)
+
+---
+
+4. **Splunk SIEM**
+![Splunk](screenshots/Splunkip.png)
+
+---
+
+5. **n8n Automation**
+![n8n](screenshots/n8nip.png)
+
+---
+
+6. **Attacker IP**
+![AttackPC](screenshots/kaliip.png)
 
 ---
 
 ## 🚀 How It Works
 
 1. **Log Collection** → Windows logs are sent to Splunk via Universal Forwarder.
+  
 2. **Alert Detection** → Splunk searches detect anomalies and trigger alerts.
+![SIEM](screenshots/splunksiem.png)
+
 3. **n8n Webhook** → Splunk alert webhook forwards to n8n.
+![n8nsetup](screenshots/n8nwebhooksetup.png)
+
+
+
 4. **Automation** → n8n parses and sends alert to Slack channel.
+![n8n](screenshots/splunkton8n.png)
+
+
 5. **SOC Visibility** → Slack receives alert messages for analyst review.
-
----
-
-## 📁 Configurations
-**pfSense**
-![pfSense interface](screenshots/pfSense.png)
-
----
-
-**Windows Server**
-![Domain Controller](screenshots/Windows%20Server.png)
-
----
-
-**Domain PC**
-![Domain PC](screenshots/windows10ip.png)
-
----
-
-**Splunk SIEM**
-![Splunk](screenshots/Splunkip.png)
-
----
-
-**n8n Automation**
-![n8n](screenshots/n8nip.png)
-
----
-
-**Attacker IP**
-![AttackPC](screenshots/kaliip.png)
-
-
+![n8nautomation](screenshots/n8ntoslack.png)
 
 ---
 
