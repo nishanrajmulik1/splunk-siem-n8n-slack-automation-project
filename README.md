@@ -23,18 +23,6 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ---
 
-## 🛠️ Features
-
-- Log collection from Windows endpoints via Universal Forwarder
-- Alert creation in Splunk for suspicious activity (e.g., PowerShell abuse, failed logons)
-- Automated alert forwarding using n8n webhook
-- Slack notifications with key alert details
-- Network isolation between internal and attack zones via pfSense
-
----
-
-## 📁 Configurations
-
 1. **pfSense**
 ![pfSense interface](screenshots/pfSense.png)
 
@@ -65,6 +53,16 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ---
 
+## 🛠️ Features
+
+- Log collection from Windows endpoints via Universal Forwarder
+- Alert creation in Splunk for suspicious activity (e.g., PowerShell abuse, failed logons)
+- Automated alert forwarding using n8n webhook
+- Slack notifications with key alert details
+- Network isolation between internal and attack zones via pfSense
+
+---
+
 ## 🚀 How It Works
 
 1. **Log Collection** → Windows logs are sent to Splunk via Universal Forwarder.
@@ -75,11 +73,8 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 3. **n8n Webhook** → Splunk alert webhook forwards to n8n.
 ![n8nsetup](screenshots/n8nwebhooksetup.png)
 
-
-
 4. **Automation** → n8n parses and sends alert to Slack channel.
 ![n8n](screenshots/splunkton8n.png)
-
 
 5. **SOC Visibility** → Slack receives alert messages for analyst review.
 ![n8nautomation](screenshots/n8ntoslack.png)
@@ -92,5 +87,11 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 - Alert creation and tuning
 - SOAR automation using open-source tools
 - Hands-on cybersecurity detection and response workflows
+
+---
+
+## 📌 Credits
+
+This project was built by [Nishan Rajmulik](https://www.linkedin.com/in/nishanrajmulik) as part of a hands-on cybersecurity learning journey.
 
 ---
