@@ -45,7 +45,7 @@ This project demonstrates a hands-on SIEM lab environment designed to simulate r
 
 ## 📁 Configurations
 **pfSense**
-![pfSense interface](screenshots/.png)
+![pfSense interface](screenshots/pfSense.png)
 
 ---
 
