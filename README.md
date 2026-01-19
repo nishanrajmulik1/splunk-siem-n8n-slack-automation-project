@@ -99,7 +99,7 @@ This project showcases a fully functional Blue Team cybersecurity lab designed t
 
 ## 🙌 Credits
 
-Created by [Nishan Rajmulik](https://www.linkedin.com/in/nishanrajmulik)  
+Created by [Nishan Rajmulik](https://www.linkedin.com/in/nrajmulik)  
 🎯 Part of my hands-on cybersecurity journey to master SIEM, SOAR, and Blue Team operations.
 
 ---
